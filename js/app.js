@@ -1,7 +1,7 @@
-let totalGeral = 0;
-// deixando a lista e o total vazios no inicio 
-document.getElementById('lista-produtos').innerHTML = '';
-document.getElementById('valor-total').textContent = 'R$0'
+// define a variavel totalGeral
+let totalGeral;
+// usa a função limpar no inicio do código para tudo estar zerado quando começar o preenchimento do carrinho
+limpar();
 
 function adicionar() {
     // PASSO A PASSO DA FUNÇÃO (lógica)
@@ -33,5 +33,8 @@ function adicionar() {
 };
 
 function limpar() {
-
+    // zerando tudo na função limpar
+    totalGeral = 0;
+    document.getElementById('lista-produtos').innerHTML = '';
+    document.getElementById('valor-total').textContent = 'R$0';
 };
