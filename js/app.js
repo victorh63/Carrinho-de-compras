@@ -27,6 +27,9 @@ function adicionar() {
     totalGeral = totalGeral + preco;
     let campoTotal = document.getElementById('valor-total');
     campoTotal.textContent = `R$ ${totalGeral}`;
+
+    // vai rodar toda vez que a função for executada zerando o campo de quantidade
+    document.getElementById('quantidade').value = '';
 };
 
 function limpar() {
