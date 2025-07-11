@@ -1,3 +1,5 @@
+let totalGeral = 0;
+
 function adicionar() {
     // PASSO A PASSO DA FUNÇÃO (lógica)
 
@@ -17,7 +19,11 @@ function adicionar() {
     carrinho.innerHTML = carrinho.innerHTML + `<section class="carrinho__produtos__produto">
           <span class="texto-azul">${quantidade}x</span> ${nomeProduto} <span class="texto-azul">R$${preco}</span>
         </section>`;
+
     // 4- atualizar valor total
+    totalGeral = totalGeral + preco;
+    let campoTotal = document.getElementById('valor-total');
+    campoTotal.textContent = `R$ ${totalGeral}`;
 };
 
 function limpar() {
